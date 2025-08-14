@@ -1,1 +1,30 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #0a0a0a;
+  color: #f3f4f6;
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+
+  @keyframes loadingBar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(300%); }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
+
+  .animate-loading-bar {
+    animation: loadingBar 1.5s linear infinite;
+  }
+}

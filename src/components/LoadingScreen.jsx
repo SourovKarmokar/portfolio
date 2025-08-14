@@ -23,14 +23,20 @@ const LoadingScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className='fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center'>
-      <div className='mb-4 text-4xl font-mono font-bold'>
+    <div className="fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center px-4">
+      
+      {/* Text with blinking cursor */}
+      <div className="mb-4 font-mono font-bold 
+                      text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
         {text}
-        <span className='animate-blink ml-1'>|</span>
+        <span className="animate-blink ml-1">|</span>
       </div>
-      <div className='w-[200px] h-[2px] bg-gray-800 rounded overflow-hidden'>
-        <div className='w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar'></div>
+
+      {/* Loading bar container */}
+      <div className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] h-[4px] bg-gray-800 rounded overflow-hidden">
+        <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
       </div>
+
     </div>
   );
 };

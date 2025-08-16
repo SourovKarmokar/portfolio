@@ -1,12 +1,14 @@
 import React from 'react';
 import profile from "../../assets/profile.png";
+import RevealOnScroll from '../RevealOnScroll';
 
 const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative py-[80px] md:px-4 "
+      className="min-h-screen flex items-center justify-center relative py-[80px] md:px-4 bg-gray-900"
     >
+      <RevealOnScroll>
       <div className="text-center z-10 w-full">
         {/* Profile Image */}
         <img
@@ -15,7 +17,7 @@ const Home = () => {
           className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-6 object-cover shadow-lg border-4 border-white"
         />
 
-        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
           Hi, I'm Sourov 👋
         </h1>
 
@@ -47,6 +49,7 @@ const Home = () => {
           </a>
         </div>
       </div>
+      </RevealOnScroll>
     </section>
   );
 };
